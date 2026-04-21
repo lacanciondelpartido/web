@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.google.com)",
+      "Bash(curl -sL \"https://docs.google.com/spreadsheets/d/1edAJDEN_u2nucrONGmkJ62LX22xYxU1exsv0PNaTlXg/export?format=csv&gid=1532265665\" -o \"/tmp/boca-sheet-main.csv\")",
+      "Read(//tmp/**)",
+      "Bash(curl -sL \"https://docs.google.com/spreadsheets/d/1edAJDEN_u2nucrONGmkJ62LX22xYxU1exsv0PNaTlXg/htmlview\" -o /tmp/boca-sheet.html)",
+      "Bash(curl -sL \"https://docs.google.com/spreadsheets/d/1edAJDEN_u2nucrONGmkJ62LX22xYxU1exsv0PNaTlXg/export?format=csv&gid=0\" -o \"/tmp/boca-sheet-partidos.csv\")",
+      "Bash([ -f \"album/infantil/$slug.txt\" ])",
+      "Bash(touch album/infantil/__TRACKED_VAR__.txt)",
+      "Bash([ -f \"album/rock/$slug.txt\" ])",
+      "Bash(touch album/rock/__TRACKED_VAR__.txt)",
+      "Bash(chmod +x /tmp/generate-songs.sh)",
+      "Bash(bash /tmp/generate-songs.sh)"
+    ]
+  }
+}

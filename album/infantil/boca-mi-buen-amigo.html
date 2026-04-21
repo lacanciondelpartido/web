@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boca mi buen amigo — Canciones de Cancha (Infantil) — La Canción del Partido</title>
+    <meta name="description" content="Boca mi buen amigo — Letra de la canción del álbum Canciones de Cancha (Infantil) de La Canción del Partido.">
+    <meta property="og:title" content="Boca mi buen amigo — Canciones de Cancha (Infantil)">
+    <meta property="og:description" content="Letra — La Canción del Partido">
+    <link rel="icon" type="image/png" href="../../logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --blue: #002F6C;
+            --blue-dark: #001E4A;
+            --yellow: #FCD116;
+            --yellow-hover: #FFD84D;
+            --yellow-bg: #FFF8DC;
+            --yellow-bg-soft: #FFFBEA;
+            --white: #FFFFFF;
+            --card: #FFFFFF;
+            --text: #002F6C;
+            --text-muted: #5B6B85;
+            --border: #E8DDB0;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+        }
+
+        body {
+            background-color: var(--blue);
+            color: var(--text);
+            font-family: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            position: sticky;
+            top: 0;
+            background: rgba(0,30,74,0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 100;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .back-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--yellow);
+            color: var(--blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .back-arrow:hover { background: var(--white); color: var(--blue); }
+        .back-arrow svg { width: 18px; height: 18px; }
+
+        .topbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--yellow);
+        }
+
+        .topbar-logo {
+            background: var(--white);
+            border: 2px solid var(--yellow);
+            border-radius: 10px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .topbar-logo img { width: 24px; height: 24px; object-fit: contain; }
+        .topbar-name { font-size: 14px; font-weight: 700; letter-spacing: -0.2px; }
+        .topbar-spacer { width: 36px; }
+
+        .song-page {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            animation: fadeUp 0.7s ease-out;
+        }
+
+        .song-cover {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1 / 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+        }
+
+        .song-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .song-album-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--blue);
+            background: var(--yellow);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .song-album-tag:hover { background: var(--white); }
+
+        .song-title {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.4px;
+            text-align: center;
+            line-height: 1.3;
+            color: var(--yellow);
+        }
+
+        .song-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .song-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--yellow);
+            color: var(--blue);
+            transition: all 0.3s ease;
+        }
+
+        .song-socials a:hover {
+            background: var(--white);
+            color: var(--blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+        }
+
+        .song-socials a svg { width: 18px; height: 18px; }
+
+        .lyrics-divider {
+            width: 48px;
+            height: 3px;
+            background: var(--yellow);
+            border-radius: 2px;
+            margin: 6px 0;
+        }
+
+        .lyrics-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .lyrics-container {
+            width: 100%;
+            text-align: center;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 28px 22px 32px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+
+        .lyrics-container .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--blue);
+            background: var(--yellow);
+            padding: 3px 8px;
+            border-radius: 5px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+
+        .lyrics-container .section-tag:first-child { margin-top: 0; }
+
+        .lyrics-container .lyric-line {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.8;
+            color: var(--blue);
+        }
+
+        .lyrics-container .section-break { height: 16px; }
+
+        .lyrics-empty {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            padding: 8px 4px;
+            width: 100%;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 20px 40px;
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+        }
+
+        .footer a { color: var(--yellow); text-decoration: none; font-weight: 600; }
+        .footer a:hover { text-decoration: underline; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav class="topbar">
+        <a href="../../index.html" class="back-arrow" aria-label="Volver">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </a>
+        <a href="../../index.html" class="topbar-brand">
+            <div class="topbar-logo"><img src="../../logo.png" alt="La Canción del Partido"></div>
+            <span class="topbar-name">La Canción del Partido</span>
+        </a>
+        <div class="topbar-spacer"></div>
+    </nav>
+
+    <main class="song-page">
+
+        <div class="song-cover">
+            <img src="../../portada/infantil.jpg" alt="Canciones de Cancha (Infantil)">
+        </div>
+
+        <a href="../infantil.html" class="song-album-tag">Canciones de Cancha (Infantil)</a>
+
+        <h1 class="song-title">Boca mi buen amigo</h1>
+
+
+
+        <div class="lyrics-divider"></div>
+        <div class="lyrics-label">Letra</div>
+        <div class="lyrics-container" id="lyrics">
+            <div class="lyrics-empty">Cargando letra...</div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 La Canción del Partido · <a href="../../index.html">Inicio</a></p>
+    </footer>
+
+    <script>
+        (function() {
+            var lyricsFile = 'boca-mi-buen-amigo.txt';
+            var container = document.getElementById('lyrics');
+
+            fetch(lyricsFile)
+                .then(function(r) { if (!r.ok) throw new Error('404'); return r.text(); })
+                .then(function(text) {
+                    if (!text || !text.trim()) {
+                        container.innerHTML = '<div class="lyrics-empty">Letra próximamente.</div>';
+                        return;
+                    }
+                    var html = '';
+                    var lines = text.split('\n');
+                    for (var i = 0; i < lines.length; i++) {
+                        var line = lines[i].trim();
+                        if (line === '') {
+                            html += '<div class="section-break"></div>';
+                        } else if (line.match(/^\[.*\]$/)) {
+                            html += '<div class="section-tag">' + line.replace(/[\[\]]/g, '') + '</div>';
+                        } else {
+                            html += '<div class="lyric-line">' + line + '</div>';
+                        }
+                    }
+                    container.innerHTML = html;
+                })
+                .catch(function() {
+                    container.innerHTML = '<div class="lyrics-empty">Letra próximamente.</div>';
+                });
+        })();
+    </script>
+
+</body>
+</html>
