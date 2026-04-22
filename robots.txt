@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /referencia/
+Disallow: /album/*.txt$
+
+Sitemap: https://lacanciondelpartido.com/sitemap.xml
