@@ -11,7 +11,8 @@
       "Bash([ -f \"album/rock/$slug.txt\" ])",
       "Bash(touch album/rock/__TRACKED_VAR__.txt)",
       "Bash(chmod +x /tmp/generate-songs.sh)",
-      "Bash(bash /tmp/generate-songs.sh)"
+      "Bash(bash /tmp/generate-songs.sh)",
+      "Read(//private/tmp/**)"
     ]
   }
 }
