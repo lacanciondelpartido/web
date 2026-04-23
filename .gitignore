@@ -1,6 +1,9 @@
 # Claude Code
 .claude/
 
+# Generadores/templates locales (no van al sitio ni al repo)
+_tools/
+
 # macOS
 .DS_Store
 ._*

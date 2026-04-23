@@ -12,7 +12,9 @@
       "Bash(touch album/rock/__TRACKED_VAR__.txt)",
       "Bash(chmod +x /tmp/generate-songs.sh)",
       "Bash(bash /tmp/generate-songs.sh)",
-      "Read(//private/tmp/**)"
+      "Read(//private/tmp/**)",
+      "Bash(bash _tools/generate-songs.sh)",
+      "Bash(curl -sL \"https://docs.google.com/spreadsheets/d/1edAJDEN_u2nucrONGmkJ62LX22xYxU1exsv0PNaTlXg/export?format=csv&gid=0\")"
     ]
   }
 }
